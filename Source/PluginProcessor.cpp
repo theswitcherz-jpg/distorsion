@@ -160,6 +160,11 @@ void SPCTRLDAudioProcessor::setStateInformation(const void* data, int sizeInByte
         parameters.replaceState(juce::ValueTree::fromXml(*xml));
 }
 
+juce::AudioProcessorEditor* SPCTRLDAudioProcessor::createEditor()
+{
+    return new SPCTRLDAudioProcessorEditor(*this);
+}
+
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new SPCTRLDAudioProcessor();
