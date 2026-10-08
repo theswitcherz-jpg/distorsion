@@ -44,3 +44,4 @@ target_link_libraries(SPCTRL_D PRIVATE
     juce::juce_audio_utils
     juce::juce_dsp
 )
+juce_generate_juce_header(SPCTRL_D)
